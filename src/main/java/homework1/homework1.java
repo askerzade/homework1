@@ -15,21 +15,23 @@ public class homework1 {
         System.out.println("Let the Game Begins!");
         int[] a = new int[100];
         int r = a.length;
-
         int rnd1 = random.nextInt(r);
-        System.out.println("Write your number: ");
         Scanner x = new Scanner(System.in);
-        int pn = x.nextInt();
-
-        if (rnd1 == pn){
-            System.out.println("Congratulations! You WON!");
-        }
-        if (rnd1<= pn){
-            System.out.println("Your number is bigger. Please try again");
-        }
-
-
-
+        int pn;
+         while(true){
+            System.out.println("Write your number: ");
+            pn = x.nextInt();
+                if (rnd1 == pn) {
+                    System.out.printf("Congratulations, %s! You WON!", name);
+                    break;
+                }
+                if (rnd1 <= pn) {
+                    System.out.println("Your number is bigger. Please try again");
+                }
+                if (rnd1 >= pn) {
+                    System.out.println("Your number is smaller. Please try again");
+                }
+            }
     }}
 
 
